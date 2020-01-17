@@ -107,6 +107,7 @@ class MetaCommand extends Command
           'bindings' => $bindings,
           'methods' => $this->methods,
           'factories' => $factories,
+          'customMethods' => $this->config->get('ide-helper.custom_methods'),
         ])->render();
 
         $filename = $this->option('filename');

@@ -28,6 +28,13 @@ namespace PHPSTORM_META {
 <?php endforeach; ?>
 	]));
 <?php endif; ?>
+<?php foreach ($customMethods as $customMethodKey => $customMethodMap): ?>
+    override(<?= $customMethodKey ?>, map([
+    <?php foreach($customMethodMap as $argument => $customMethodReturnClass): ?>
+    '<?= $argument ?>' => \<?= $customMethodReturnClass ?>::class,
+    <?php endforeach; ?>
+]));
+<?php endforeach; ?>
 
     override(\Illuminate\Support\Arr::add(0), type(0));
     override(\Illuminate\Support\Arr::except(0), type(0));

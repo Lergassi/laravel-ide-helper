@@ -13,7 +13,7 @@ return array(
 
     'filename'  => '_ide_helper',
     'format'    => 'php',
-    
+
     'meta_filename' => '.phpstorm.meta.php',
 
     /*
@@ -205,5 +205,21 @@ return array(
     |
     */
     'include_class_docblocks' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Custom methods
+    |--------------------------------------------------------------------------
+    |
+    | Ключи должены быть текстовыми и начинаться с обратного слеша \
+    | Пример с getRepository из Doctrine:
+    |    '\Doctrine\ORM\EntityManager::getRepository(0)' => [
+    |        '\App\Entity\Hero' => \App\Repositories\HeroRepository::class,
+    |    ],
+    |
+    */
+    'custom_methods' => [
+
+    ],
 
 );
